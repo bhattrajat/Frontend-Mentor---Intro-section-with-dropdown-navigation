@@ -30,7 +30,7 @@ const Menu = ({ title, subMenu }: propTypes) => {
       {isOpen && (
         <ul className="flex max-w-sm flex-col gap-4 rounded-md p-4 lg:absolute lg:right-0 lg:w-32 lg:bg-white lg:shadow-[0_4px_8px_4px_rgba(0,0,0,0.3)]">
           {subMenu?.map((link) => (
-            <Link href="#">
+            <Link key={link.title} href="#">
               <a className="flex items-center">
                 {link.imgUrl && <img className="mr-2" src={link.imgUrl} />}
                 {link.title}

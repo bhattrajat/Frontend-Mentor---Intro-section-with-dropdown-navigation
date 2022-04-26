@@ -5,7 +5,7 @@ module.exports = {
   reactStrictMode: true,
   basePath: isProd
     ? '/Frontend-Mentor---Intro-section-with-dropdown-navigation'
-    : '/',
+    : '',
   assetPrefix: isProd
     ? '/Frontend-Mentor---Intro-section-with-dropdown-navigation'
     : '',

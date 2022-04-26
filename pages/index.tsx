@@ -7,11 +7,11 @@ import HeroDesktop from '../images/image-hero-desktop.png'
 
 const heroLinks = [
   {
-    url: '../images/client-databiz.svg',
+    url: '/images/client-databiz.svg',
   },
-  { url: '../images/client-audiophile.svg' },
-  { url: '../images/client-meet.svg' },
-  { url: '../images/client-maker.svg' },
+  { url: '/images/client-audiophile.svg' },
+  { url: '/images/client-meet.svg' },
+  { url: '/images/client-maker.svg' },
 ]
 const Home: NextPage = () => {
   return (

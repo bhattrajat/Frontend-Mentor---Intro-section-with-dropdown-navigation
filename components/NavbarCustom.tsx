@@ -23,10 +23,10 @@ const primaryMenuItems: MenuItems = [
   {
     title: 'Features',
     subMenu: [
-      { title: 'Todo List', imgUrl: '../images/icon-todo.svg' },
-      { title: 'Calendar', imgUrl: '../images/icon-calendar.svg' },
-      { title: 'Reminders', imgUrl: '../images/icon-reminders.svg' },
-      { title: 'Planning', imgUrl: '../images/icon-planning.svg' },
+      { title: 'Todo List', imgUrl: '/images/icon-todo.svg' },
+      { title: 'Calendar', imgUrl: '/images/icon-calendar.svg' },
+      { title: 'Reminders', imgUrl: '/images/icon-reminders.svg' },
+      { title: 'Planning', imgUrl: '/images/icon-planning.svg' },
     ],
   },
   {
@@ -65,7 +65,13 @@ const NavBarCustom = () => {
         <div className="hidden items-center gap-x-12 lg:ml-5 lg:flex">
           {primaryMenuItems.map((item) => {
             if (item.subMenu) {
-              return <Menu title={item.title} subMenu={item.subMenu} />
+              return (
+                <Menu
+                  key={item.title}
+                  title={item.title}
+                  subMenu={item.subMenu}
+                />
+              )
             }
             return (
               <Link href="#" key={item.title}>
@@ -109,7 +115,13 @@ const NavBarCustom = () => {
               </button>
               <ul className="flex flex-col gap-4">
                 {primaryMenuItems.map((item) => {
-                  return <Menu title={item.title} subMenu={item.subMenu} />
+                  return (
+                    <Menu
+                      key={item.title}
+                      title={item.title}
+                      subMenu={item.subMenu}
+                    />
+                  )
                 })}
               </ul>
             </div>
