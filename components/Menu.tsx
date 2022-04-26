@@ -11,6 +11,10 @@ type propTypes = {
 }
 
 const Menu = ({ title, subMenu }: propTypes) => {
+  const isProd = process.env.NODE_ENV === 'production'
+  const imagePrefix = isProd
+    ? '/Frontend-Mentor---Intro-section-with-dropdown-navigation'
+    : ''
   const [isOpen, setIsOpen] = useState(false)
   return (
     <li className="list-none lg:relative">
@@ -32,7 +36,9 @@ const Menu = ({ title, subMenu }: propTypes) => {
           {subMenu?.map((link) => (
             <Link key={link.title} href="#">
               <a className="flex items-center">
-                {link.imgUrl && <img className="mr-2" src={link.imgUrl} />}
+                {link.imgUrl && (
+                  <img className="mr-2" src={imagePrefix + link.imgUrl} />
+                )}
                 {link.title}
               </a>
             </Link>

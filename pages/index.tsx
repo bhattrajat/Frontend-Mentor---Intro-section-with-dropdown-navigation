@@ -4,6 +4,7 @@ import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import HeroMobile from '../images/image-hero-mobile.png'
 import HeroDesktop from '../images/image-hero-desktop.png'
+import { ReactNode } from 'react'
 
 const heroLinks = [
   {
@@ -13,7 +14,13 @@ const heroLinks = [
   { url: '/images/client-meet.svg' },
   { url: '/images/client-maker.svg' },
 ]
-const Home: NextPage = () => {
+
+type PropsType = {
+  isProd: boolean
+  children: ReactNode
+}
+
+const Home: NextPage<PropsType> = ({ isProd }) => {
   return (
     <>
       <Head>
