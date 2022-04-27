@@ -20,7 +20,11 @@ type PropsType = {
   children: ReactNode
 }
 
-const Home: NextPage<PropsType> = ({ isProd }) => {
+const Home: NextPage<PropsType> = () => {
+  const isProd = process.env.NODE_ENV === 'production'
+  const imagePrefix = isProd
+    ? '/Frontend-Mentor---Intro-section-with-dropdown-navigation'
+    : ''
   return (
     <>
       <Head>
@@ -39,7 +43,7 @@ const Home: NextPage<PropsType> = ({ isProd }) => {
           <div className="mt-20 flex justify-between">
             {heroLinks.map((img) => (
               <img
-                key={img.url}
+                key={imagePrefix + img.url}
                 alt=""
                 className="w-20 object-scale-down lg:mr-4"
                 src={img.url}
