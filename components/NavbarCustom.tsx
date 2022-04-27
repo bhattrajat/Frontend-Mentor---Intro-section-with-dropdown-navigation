@@ -59,7 +59,7 @@ const NavBarCustom = () => {
   }
   return (
     <nav className="flex items-center justify-between gap-x-4 p-4 lg:justify-start">
-      <h2 className="text-xl font-bold">snap</h2>
+      <h2 className="text-3xl font-bold">snap</h2>
 
       <div className="flex items-center justify-between lg:flex-grow">
         <div className="hidden items-center gap-x-12 lg:ml-5 lg:flex">

@@ -51,7 +51,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <nav className="flex items-center justify-between gap-x-4 p-4 lg:justify-start">
-      <h2 className="text-xl font-bold">snap</h2>
+      <h2 className="text-3xl font-bold">snap</h2>
       <div className="flex items-center justify-between lg:flex-grow">
         <div className="lg:flex">
           {primaryMenuItems.map((item) => {
