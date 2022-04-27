@@ -25,6 +25,7 @@ const Home: NextPage<PropsType> = () => {
   const imagePrefix = isProd
     ? '/Frontend-Mentor---Intro-section-with-dropdown-navigation'
     : ''
+
   return (
     <>
       <Head>
@@ -43,10 +44,10 @@ const Home: NextPage<PropsType> = () => {
           <div className="mt-20 flex justify-between">
             {heroLinks.map((img) => (
               <img
-                key={imagePrefix + img.url}
+                key={img.url}
                 alt=""
                 className="w-20 object-scale-down lg:mr-4"
-                src={img.url}
+                src={imagePrefix + img.url}
               />
             ))}
           </div>
